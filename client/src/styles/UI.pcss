@@ -1,0 +1,192 @@
+@import "_breakpoint.pcss";
+.UIButton {
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: var(--colorDanube);
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  border-radius: 10px;
+  transition: box-shadow 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__fix {
+    padding: 15px 0;
+    width: 220px;
+  }
+
+  &__full {
+    width: 100%;
+    padding: 23px 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 15px 5px var(--colorDanube);
+  }
+
+  &:active {
+    box-shadow: none;
+    color: var(--colorAstral);
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-family: "Gilroy", sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: var(--colorDanube);
+  transition: 0.3s ease-in-out;
+
+  img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    text-shadow: #1f3f68 0 0 1px;
+
+    img {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: var(--colorBiscay);
+    opacity: 0.8;
+    margin-bottom: 8px;
+  }
+
+  &__content {
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  &__input {
+    border: 1px solid var(--colorAstral);
+    padding: 21px 42px;
+    border-radius: 10px;
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: var(--colorBiscay);
+    width: 100%;
+
+    &:focus {
+      border: 1px solid var(--colorDanube);
+    }
+  }
+
+  &__textarea {
+    border: 1px solid var(--colorAstral);
+    padding: 21px 42px;
+    border-radius: 10px;
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: var(--colorBiscay);
+    resize: none;
+    height: 144px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--colorDanube);
+    }
+  }
+
+  &__errorIcon {
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    top: 0;
+    bottom: 0;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    width: 20px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  }
+
+  &__error {
+    .formItem__input {
+      border: 1px solid var(--colorScarlet);
+    }
+
+    .formItem__textarea {
+      border: 1px solid var(--colorScarlet);
+    }
+
+    .formItem__errorIcon {
+      right: 10px;
+      transform: translateX(0%);
+    }
+  }
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__title {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin-bottom: var(--baseIndent);
+  }
+
+  &__item {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: $SmallBreakpoint) {
+  .UIButton {
+    &__fix {
+      padding: 10px 0;
+      width: 220px;
+    }
+
+    &__full {
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+
+  .formItem {
+    &__input {
+      padding: 10px 15px;
+    }
+    &__textarea {
+      padding: 10px 15px;
+    }
+  }
+
+}

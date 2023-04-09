@@ -1,0 +1,6 @@
+mixin input(text,placeholderValue,typeValue, idValue)
+    .formItem
+        label.formItem__label(for=idValue)=text
+        .formItem__content
+            input.formItem__input(id=idValue type = typeValue, placeholder = placeholderValue)
+            img(class='formItem__errorIcon' src='./../images/errorIcon.svg' alt='error')

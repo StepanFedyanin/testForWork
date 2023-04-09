@@ -1,0 +1,56 @@
+include ./UI/button
+include ./UI/linkList
+.clientWithFooter
+    .client
+        .client__header
+            .client__title Our Beloved Client
+            .client__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        table.client__list
+            tr
+                td LOGO CLIENT 1
+                td LOGO CLIENT 2
+                td LOGO CLIENT 3
+                td LOGO CLIENT 4
+            tr
+                td LOGO CLIENT 5
+                td LOGO CLIENT 6
+                td LOGO CLIENT 7
+                td.table__more More Client
+    .footer
+        .footer__inner.footer__border
+            .footer__container
+                .footer__massage
+                    .massage
+                        h2.massage__title Intersted to woek with our team?
+                        p.massage__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    .massage__form#form__massage
+                        +UIbutton('Let’s Talk','form__btn','fix')
+                        include ../component/modal
+        .footer__inner
+            .footer__container.footer__bottom
+                .footer__content
+                    .footer__description
+                        .footer__logo
+                            img(src='./../images/logoLight.svg' alt='logo')
+                            p.footer__logo--text Afrianska
+                        p.footer__item
+                            span A.
+                            |  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        a.footer__item(href='tel:62-812-7313-4321')
+                            span T.
+                            |  +62-812-7313-4321
+                        a.footer__item(href='mailto:hello.afrian@gmail.com')
+                            span E
+                            |  hello.afrian@gmail.com
+                    .footer__links
+                        +linkList('About US',[{href: '#', text: 'About'}, {href: '#', text: 'What We Do'}, {
+                            href: '#',
+                            text: 'Project'
+                        }, {href: '#', text: 'How It Work With Us'}])
+                        +linkList('Follow US',[{href: '#', text: 'Instagram'}, {href: '#', text: 'Facebook'}, {
+                            href: '#',
+                            text: 'LinkedIn'
+                        }, {href: '#', text: 'Youtube'}])
+                p.footer__copy 2019 © Afrianska. All rights reserved.
+
+

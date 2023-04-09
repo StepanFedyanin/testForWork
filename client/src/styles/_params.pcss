@@ -1,0 +1,47 @@
+@import "_breakpoint.pcss";
+:root {
+  --colorDanube: #5a98d0;
+  --colorAstral: #356ead;
+  --colorAzure: #316099;
+  --colorBiscay: #1f3f68;
+  --colorScarlet: #ff3600;
+  --containerMaxWidthMore: 1200px;
+  --containerMaxWidth: 940px;
+  --baseIndent: 32px;
+
+}
+
+@media (max-width: $ExtraLargeBreakpoint) {
+  :root {
+    --containerMaxWidthMore: calc(100vw - 75px);
+  }
+}
+
+@media (max-width: $largeBreakpoint) {
+  :root {
+    --containerMaxWidth: calc(100vw - 100px);
+    --containerMaxWidthMore: calc(100vw - 50px);
+  }
+}
+
+@media (max-width: $MediumBreakpoint) {
+  :root {
+    --containerMaxWidth: calc(100vw - 75px);
+    --containerMaxWidthMore: calc(100vw - 25px);
+  }
+}
+
+@media (max-width: $SmallBreakpoint) {
+  :root {
+    --containerMaxWidth: calc(100vw - 50px);
+    --containerMaxWidthMore: calc(100vw - 30px);
+  }
+}
+
+.body {
+  position: relative;
+}
+.disableScrolling {
+  overflow: hidden;
+  height: 100vh;
+}

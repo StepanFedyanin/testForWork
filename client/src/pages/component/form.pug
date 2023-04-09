@@ -1,0 +1,11 @@
+form(class='form' id='form')
+    .form__header
+        h1.form__title SEND US MESSAGE
+        button.form__close#modal__close &#10006;
+    .form__item
+        +input('Full Name','Your Name','text','form__name')
+    .form__item
+        +input('Email','Your Email','text','form__mail')
+    .form__item.form__text
+        +textarea('Message','Your Message','form__text')
+    +UIbutton('SUBMIT','submitForm','full')

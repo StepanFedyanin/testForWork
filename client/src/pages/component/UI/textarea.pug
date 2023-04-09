@@ -1,0 +1,7 @@
+mixin textarea(text,placeholderValue, idValue)
+    .formItem
+        label.formItem__label(for=idValue)=text
+        .formItem__content
+            textarea.formItem__textarea(id=idValue, placeholder = placeholderValue rows="5" cols="5")
+            img(class='formItem__errorIcon' src='./../images/errorIcon.svg' alt='error')
+

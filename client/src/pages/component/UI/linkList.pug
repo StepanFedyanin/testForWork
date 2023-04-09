@@ -1,0 +1,5 @@
+mixin linkList(title,list)
+    .linkList
+        p.linkList__title=title
+        each item in list
+            a.linkList__item(href=item.href)=item.text

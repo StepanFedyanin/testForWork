@@ -1,0 +1,85 @@
+@import "_breakpoint.pcss";
+.greetings {
+  max-height: 768px;
+  display: flex;
+  height: 100vh;
+  min-height: 750px;
+  background: linear-gradient(0deg, rgba(152, 195, 232, 0.2) 8.84%, rgba(152, 195, 232, 0) 31.12%);
+
+  &__inner {
+    padding: 44px 0 56px 0;
+    max-width: 1366px;
+    margin: 0 auto;
+    background-image: url("../images/greetingsCover.svg");
+    background-repeat: no-repeat;
+    background-position: 97% 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: var(--containerMaxWidth);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__description {
+    width: 55%;
+  }
+
+  &__title {
+    font-family: "Galien", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: 0.04em;
+    color: var(--colorBiscay);
+    margin-bottom: var(--baseIndent);
+  }
+
+  &__info {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: var(--colorBiscay);
+    opacity: 60%;
+    margin-bottom: calc(var(--baseIndent) *2);
+    width: 80%;
+  }
+}
+
+@media (max-width: $largeBreakpoint) {
+  .greetings {
+    &__inner {
+      background-size: 33vh;
+      background-position: 95% 90%;
+    }
+    &__description {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: $MediumBreakpoint) {
+  .greetings {
+    &__inner {
+      background: none;
+    }
+    &__description {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $MediumBreakpoint) {
+  .greetings {
+    &__info {
+      width: 100%;
+    }
+  }
+}

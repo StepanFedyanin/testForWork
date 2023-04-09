@@ -1,0 +1,67 @@
+@import "_breakpoint.pcss";
+.servicesCard {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  padding: 47px;
+  transition: box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &.displace {
+    position: relative;
+    height: 537px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .servicesCard__cover {
+      top: -12px;
+      position: absolute;
+    }
+  }
+  &:hover {
+    box-shadow: 0 0 20px 5px var(--colorDanube);
+  }
+
+  &__cover {
+    margin-bottom: 56px;
+  }
+
+  &__title {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: var(--colorBiscay);
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: var(--colorBiscay);
+    opacity: 0.6;
+    margin-bottom: var(--baseIndent);
+  }
+  &__more {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: $MediumBreakpoint) {
+  .servicesCard {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: $SmallBreakpoint) {
+  .servicesCard {
+    padding: 20px;
+  }
+}

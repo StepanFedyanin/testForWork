@@ -1,0 +1,41 @@
+@import "_breakpoint.pcss";
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 56px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+
+  &__close {
+    font-size: 20px;
+    color: var(--colorBiscay);
+  }
+  &__title {
+    font-family: "Gilroy", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: var(--colorBiscay);
+  }
+
+  &__item {
+    margin-bottom: 7%;
+  }
+  &__text {
+    margin-bottom: 17%;
+  }
+
+}
+
+@media (max-width: $SmallBreakpoint) {
+  .form {
+    padding: 25px;
+    &__text {
+      margin-bottom: 7%;
+    }
+  }
+
+}

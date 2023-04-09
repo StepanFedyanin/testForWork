@@ -1,0 +1,10 @@
+include ./UI/link
+mixin servicesCard(url,title,text,params)
+    div(class=`servicesCard ${params}`)
+        .servicesCard__cover
+            img(src=`./../images/${url}` alt='services cover')
+        p.servicesCard__title=title
+        p.servicesCard__description=text
+        .servicesCard__more
+            +LinkArrow('Learn more','#')
+
